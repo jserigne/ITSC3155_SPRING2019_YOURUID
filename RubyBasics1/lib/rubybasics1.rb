@@ -11,5 +11,6 @@ end
 
 # Part III
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  return false if arr.empty? && n.zero?
+  arr.combination(2).any? {|a, b| a + b == n }
 end
