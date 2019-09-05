@@ -1,8 +1,6 @@
 require 'hashes.rb'
 
-RSpec.configure do |config|
-  config.filter_run_excluding :disabled => true
-end
+
 
 describe 'Ruby Hashes Part I' do
 
@@ -37,7 +35,7 @@ describe 'Ruby Hashes Part II' do
     
     it "works on the empty array [10 points]" , points: 10 do
       expect { array2d_2_hash([[]], {'Bob Smith'=>{}, 'Sally Field'=>{}}) }.not_to raise_error
-      expect(array2d_2_hash([[]], {'Bob Smith'=>{}, 'Sally Field'=>{}})).to eq({:"Bob Smith"=>{}, :"Sally Field"=>{}})
+      expect(array2d_2_hash([[]], {'Bob Smith'=>{}, 'Sally Field'=>{}})).to eq({"Bob Smith"=>{}, "Sally Field"=>{}})
     end
   end
 end
