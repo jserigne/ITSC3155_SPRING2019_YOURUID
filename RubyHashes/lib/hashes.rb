@@ -32,23 +32,20 @@ end
 
 # Part III
 def hash_2_array contacts
-    finalArray = []
-    emailArray = []
-    phoneArray = []
-    nameArray = []
-    
-    
+    fArray = []
+    eArray = []
+    pArray = []
+    nArray = []
     contacts.each do |key, value|
         key2 = :"#{key}"
-        
-        emailArray << contacts[key2][:email]
-        phoneArray << contacts[key2][:phone]
-        nameArray << "#{key}"
+        eArray << contacts[key2][:email]
+        pArray << contacts[key2][:phone]
+        nArray << "#{key}"
     end
-    finalArray << emailArray
-    finalArray << phoneArray
-    finalArray << nameArray
+    fArray << eArray
+    fArray << pArray
+    fArray << nArray
     
-    return finalArray
+    return fArray
 end
 
