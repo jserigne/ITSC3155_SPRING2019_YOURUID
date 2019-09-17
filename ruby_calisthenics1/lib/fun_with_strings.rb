@@ -3,8 +3,27 @@ module FunWithStrings
     self.gsub(/\W/,'').downcase == self.gsub(/\W/,'').downcase.reverse
   end
   def count_words
-    # your code here
+    
+    dic = Hash.new
+
+    self.downcase.gsub(/[^a-z\s]/,'').split.each do |word|
+
+    if dic[word] != nil
+
+    dic[word] += 1
+
+    else
+
+    dic[word] = 1
+
+    end
+
+    end
+
+    dic
+  
   end
+  
   def anagram_groups
     # your code here
   end
