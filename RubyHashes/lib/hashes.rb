@@ -1,0 +1,51 @@
+# RubyHashes
+# Part I
+def array_2_hash emails, contacts
+   contacts2 = {}
+    x = 0
+    
+    if emails[0] == nil
+        return contacts
+    else
+        contacts.each do |key, value|
+            key2 = "#{key}"
+            contacts2[key2] = emails[x]
+            x+=1
+        end
+    end
+    return contacts2
+end
+# Part II
+def array2d_2_hash contact_info, contacts
+    contacts2 = {}
+    x = 0
+    if contact_info[0][0] == nil
+        return contacts
+    end
+    contacts.each do |key, value|
+        keyOther = :"#{key}"
+        contacts2[keyOther] = {:email => contact_info[x][0], :phone => contact_info[x][1]}
+        x+=1
+    end
+    return contacts2
+end
+
+# Part III
+def hash_2_array contacts
+    fArray = []
+    eArray = []
+    pArray = []
+    nArray = []
+    contacts.each do |key, value|
+        key2 = :"#{key}"
+        eArray << contacts[key2][:email]
+        pArray << contacts[key2][:phone]
+        nArray << "#{key}"
+    end
+    fArray << eArray
+    fArray << pArray
+    fArray << nArray
+    
+    return fArray
+end
+
